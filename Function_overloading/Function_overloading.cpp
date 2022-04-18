@@ -28,14 +28,19 @@ class func_overload
     int func(float x,float y)
     {
         i=fmod(x,y);
+        return i;
     }
 };
 int main()
 {
-    int a=32,b=7;
+    int a,b,c,d;
     func_overload obj1;
     obj1.func(5);
+    cout<<"Swapping Check "<<endl;
+    cin>>a>>b;
     obj1.func(& a,& b);
     cout<<a<<endl<<b;
-    obj1.func(8.9, 2.3);
+    cout<<endl<<"Modulo Check "<<endl;
+    cin>>c>>d;
+    cout<<endl<<obj1.func(c, d);
 }
